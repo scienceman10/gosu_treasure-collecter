@@ -6,6 +6,7 @@ class Tc < Gosu::Window
     super(640, 640)
     self.caption = "Treasure Hunt and Collector Game"
     @game = Game.new(self)
+
   end
 
   def update

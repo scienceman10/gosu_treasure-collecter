@@ -25,6 +25,22 @@ class Tile
     @hidden = false
   end
   def draw
+    if tile_is_drawn? && !hidden?
+      x1 = @column * WIDTH
+      y1 = @row * HEIGHT
+      x2 = x1 + WIDTH
+      y2 = y1
+      x3 = x2
+      y3 =  y2 + HEIGHT
+      x4 = x1
+      y4 = y3
+      c = color
+      @@window.draw_quad(x1, y1, c, x2, y2, c, x3, y3, c, x4, y4, c, 2)
+      x_center = x1 + (WIDTH / 2)
+      x_text = x_center - @@font.text_width("#{@type}") / 2
+      y_text = y1 + 4
+      @@font.draw("#{@type}", x_text, y_text, 1)
+    end
   end
-  
+
 end
