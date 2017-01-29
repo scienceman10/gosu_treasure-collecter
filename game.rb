@@ -2,7 +2,7 @@ require 'gosu'
 require_relative 'player'
 require_relative 'level'
 
-class Game
+class Game(window)
   LEVEL1 = [
     "+------------------+",
     "|S.|....T..........|",
@@ -11,7 +11,7 @@ class Game
     "|.+|.|.E|.|....|...|",
     "|..|.|---.|.|--|...|",
     "|..|.|....|.|......|",
-    "|+.|.|......|..|=|.|",
+    "|+.|.|......|..|+|.|",
     "|..|.|-----.|..|+|.|",
     "|..|T.......|..|+|.|",
     "|.++--------+..|+|.|",
@@ -31,6 +31,7 @@ class Game
     @level = Level.new(@window, @player, LEVEL1)
     @font = Gosu::Font.new(32)
     @start_time = Time.now.to_i
+    puts "game started"
   end
   def button_down(id)
     @level.button_down(id)

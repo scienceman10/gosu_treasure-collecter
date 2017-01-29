@@ -1,12 +1,14 @@
+puts "started treasure-collector"
 require 'gosu'
 require_relative 'game'
 
 class Tc < Gosu::Window
   def initialize
+    puts "welcome to my game! press 'h' for help."
+    sleep(1.5)
     super(640, 640)
-    self.caption = "Treasure Hunt and Collector Game"
+    self.caption = "Treasure Hunt and Collecting Game"
     @game = Game.new(self)
-
   end
 
   def update

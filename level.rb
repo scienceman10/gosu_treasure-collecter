@@ -21,6 +21,10 @@ class Level
   def setup_level
   end
   def button_down(id)
+    if id == 'h'
+      @window.hide
+      puts ""
+    end
   end
   def update
   end
