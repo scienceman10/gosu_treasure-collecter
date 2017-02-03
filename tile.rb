@@ -82,7 +82,7 @@ class Tile
     @hidden = true
   end
   def make_empty
-    @type = EMTPTY_T
+    @type = EMPTY_T
   end
   def tile_is_drawn?
     !is_empty? && !is_start?

@@ -2,7 +2,7 @@ require 'gosu'
 require_relative 'player'
 require_relative 'level'
 
-class Game(window)
+class Game
   LEVEL1 = [
     "+------------------+",
     "|S.|....T..........|",
