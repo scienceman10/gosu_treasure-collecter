@@ -31,7 +31,6 @@ class Game
     @level = Level.new(@window, @player, LEVEL1)
     @font = Gosu::Font.new(32)
     @start_time = Time.now.to_i
-    puts "game started"
   end
   def button_down(id)
     @level.button_down(id)
@@ -49,7 +48,7 @@ class Game
   def draw_hud
     if @level.level_over?
       @font.draw("GAME OVER!", 170, 150, 10, 2, 2)
-      @font.draw("Collected #{@player.score} treasure in #{time_in_seconds} seconds!",110, 300, 10)
+      @font.draw("Collected #{@player.score} treasures in #{time_in_seconds} seconds!",110, 300, 10)
     else
       @font.draw("Time: #{time_in_seconds}", 4, 2, 10)
       @font.draw("Score: #{@player.score}", 510, 2, 10)

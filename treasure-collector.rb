@@ -4,8 +4,6 @@ require_relative 'game'
 
 class Tc < Gosu::Window
   def initialize
-    puts "welcome to my game! press 'h' for help."
-    sleep(1.5)
     super(640, 640)
     self.caption = "Treasure Hunt and Collecting Game"
     @game = Game.new(self)
@@ -24,5 +22,12 @@ class Tc < Gosu::Window
   end
 end
 
+puts "starting in:"
+for i in -3..-0 do
+  puts i.abs
+  sleep(1)
+end
 window = Tc.new
 window.show
+sleep(100)
+abort "sorry! took to long!"

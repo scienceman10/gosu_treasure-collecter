@@ -51,6 +51,7 @@ class Level
     elsif id == Gosu::KbDown
       row_change = 1
     end
+
     if move_valid?(@player, column_change, row_change)
       @player.move_by(column_change, row_change)
       tile = get_tile(@player.column, @player.row)
